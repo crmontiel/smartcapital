@@ -1,12 +1,14 @@
 {
-  "name": "login-firebase",
+  "name": "smartcapitalhn",
   "version": "0.0.0",
   "scripts": {
+    
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "heroku-postbuild":"nd build --prod"
   },
   "private": true,
   "dependencies": {
@@ -25,6 +27,7 @@
     "@firebase/auth": "^0.17.2",
     "@ng-bootstrap/ng-bootstrap": "^10.0.0",
     "bootstrap": "^4.5.0",
+    "express": "^4.18.1",
     "firebase": "^9.0.2",
     "lodash": "^4.17.21",
     "rxfire": "^6.0.0",
