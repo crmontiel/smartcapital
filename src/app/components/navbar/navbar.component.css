@@ -1,0 +1,15 @@
+.ngNv{
+    background: #0E0E23!important;
+    
+}
+.ngNv a{
+    display: flex;
+    align-items: center;
+    font-family: Kanit;
+    font-weight: bold;
+    color: #FFF;
+    font-size: 2rem;
+    padding-top: 15px;
+    padding-bottom: 18px;
+    letter-spacing: 2px;
+}

@@ -1,0 +1,11 @@
+<li class="liUl">
+    <span id="level-agrega" *ngIf="Nodo.nombre==''" (click)="verForm=false">Agregar</span>
+    <span [id]="level" *ngIf="Nodo.nombre!=''" (click)="vopen()">{{Nodo.nombre}} <br>{{Nodo.apellidos}}
+    <span class="tag-pago" *ngIf="level=='level3' && Nodo.pago" (click)="Nodo.pago=!Nodo.pago">PAGO ✓</span>
+    <span class="tag-pago-p" *ngIf="level=='level3' && !Nodo.pago && Nodo.nombre!=''" (click)="Nodo.pago=!Nodo.pago">PENDIENTE</span>
+    </span>
+    <ul *ngIf="level!='level3'">
+        <app-nodo class="liNav" *ngFor="let item of Nodo.invitados" [level]="level==''? 'level2':'level3'"  [Nodo]="item" ></app-nodo>        
+    </ul>
+    <app-form-agrega-nodo class="nodoForm" (_crearNodo)="Agrega($event)" [hidden]="verForm" [nodo]="Nodo"></app-form-agrega-nodo>
+</li>

@@ -1,0 +1,36 @@
+.row col{
+    border:1px solid #FFFF;
+}
+.itemGrupo{
+    border: 1px dashed #FFFF;
+    /* width: 100px; */
+    /* height: 100px; */
+    color: #FFF;
+    vertical-align: middle;
+    font-size: 2.5rem;
+    padding: 25px;
+    width: auto;
+    float: left;
+    margin: 10px;
+}
+
+.itemGrupo:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.562);
+}
+
+.gruText{
+   
+    align-items: center;
+    font-family: Kanit;
+    font-weight: bold;
+    color: #FFF;
+    font-size: 1rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    letter-spacing: 2px;
+}
+.green{
+    background: green!important;
+    color: #FFF;
+}

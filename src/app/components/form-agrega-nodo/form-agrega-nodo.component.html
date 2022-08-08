@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="card text-center">
+      
+      <div class="card-body p-4">
+        <label style="float: center;">Nombre:</label>
+        <input class="form-control m-2" type="text" 
+        placeholder="Nombre" 
+        [(ngModel)]="nuevoNodo.nombre" autofocus  (keyup.enter)="agregar()">
+        
+        <label style="float: center;">Apellido:</label>
+        <input class="form-control m-2" id="ape" type="text" 
+        placeholder="Apellido" 
+        [(ngModel)]="nuevoNodo.apellidos" (keyup.enter)="agregar()">
+        
+        <label style="float: center;">Pago:</label>
+        <input class="form-control m-2" type="checkbox" [(ngModel)]="nuevoNodo.pago">
+        
+        <button class="btn btn-primary btn-block m-2" (click)="agregar()">Ingresar</button>
+      </div>
+  
+  
+    </div>
+  </div>

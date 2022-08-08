@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <button class="btn btn-danger btn-block m-2" (click)="cargaGrupos();verArbol=false">VerGrupos</button>
+  </div>
+  <div class="card text-center vh-100">
+  <div class="row">
+    <div class="col-md-4">
+      <button class="btn btn-primary btn-block m-2" *ngIf="id==null" (click)="creaGrupo()">Guardar Grupo</button>
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-primary btn-block m-2" *ngIf="id!=null" (click)="actualizaGrupo()">Actualizar</button>
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-primary btn-block m-2" (click)="dividirGrupo()">Dividir</button>
+    </div>
+  </div>
+  <br>
+    
+      <div class="card-header">
+        <b style="color:#FFFF;" class="gruText" (click)="verF=!verF">Grupo #{{noGrupo}}</b>
+        <div class="container">
+          <div class="card text-center">
+            
+            <div class="card-body p-4" [hidden]="verF">
+              <label style="float: left;">#:</label>
+              <input class="form-control m-2" type="text" placeholder="grupo" [(ngModel)]="noGrupo">
+              <button class="btn btn-primary btn-block m-2" (click)="agregar()">Ingresar</button>
+            </div>       
+          </div>
+        </div>
+      </div>
+      <div class="card-body p-4" *ngIf="!verArbol">
+      <div class="itemGrupo" *ngFor="let item of grupos" (click)="datos=item.datos;noGrupo=item.grupo;verArbol=true;id=item.id" [ngClass]="{'green': item.datos[0].pagosRecibidos==4}" >
+        {{item.grupo}}        
+      </div>
+      </div> 
+      <div class="card-body p-4" *ngIf="verArbol">
+        <app-piramide [NodosPadres]="datos"></app-piramide>
+      </div> 
+
+    </div>
+  </div>
